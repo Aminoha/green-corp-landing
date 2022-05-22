@@ -11,7 +11,7 @@ input {
     font-size: 18px;
     color: #213053;
     height: 60px;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
     border-radius: 15px;
     border: none;
 }
@@ -102,6 +102,8 @@ input {
 .about__sun-image {
     width: 100px;
     height: 100px;
+    animation: rotation 10s infinite linear;
+    position: absolute;
 }
 
 header {
@@ -109,6 +111,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    background-color: white;
+    top:0;  
+    z-index: 1;
 }
 
 body {
@@ -187,3 +193,78 @@ button:hover {
     margin-bottom: 15px;
 }
 
+@keyframes rotation {
+from {transform: rotate(0);}
+to {transform: rotate(360deg);}
+}
+
+@media (max-width: 720px) {
+
+    .header__logo {
+        height: 20px;
+    }
+    section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .about__image {
+        width: 280px;
+    }
+    
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .about {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .form {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .footer__container {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 320px) {
+
+    .header__logo {
+        height: 20px;
+    }
+    section {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .about__image {
+        width: 280px;
+    }
+    
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .about {
+        padding: 10px 0px 10px 0;
+    }
+
+    .form {
+        padding: 10px 0px 10px 0;
+    }
+  }
